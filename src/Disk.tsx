@@ -56,7 +56,6 @@ const Disk: React.FC<DiskProps> = ({radius = 500}) => {
         const newAngle = normalizeAngle(currentAngle - initialAngle);
     
         setAngle(newAngle);
-
     }
 
     function handleRotationStop() {
