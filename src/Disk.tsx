@@ -103,27 +103,36 @@ const Disk: React.FC<DiskProps> = ({radius = 500}) => {
 
     return (
         <div>
-            <div><h3>Current carachter: {mapToIndex(angle)}</h3></div>
-            <textarea
-                
+            <div className="shift-header"><h3>Current shift: {mapToIndex(angle)}</h3></div>
+            <div className="text-container">
+                <textarea
                 value={plainText}
                 onChange={handleChange}
+                placeholder="Type here..."
             />
-            <div>{plainText.split("").map((c) => shiftLetter(c, mapToIndex(angle))).join("")}</div>
-            <button
-                onClick={handleCopy}
-                style={{
-                    padding: "10px 20px",
-                    fontSize: "16px",
-                    backgroundColor: copied ? "#28a745" : "#007bff",
-                    color: "white",
-                    border: "none",
-                    borderRadius: "5px",
-                    cursor: "pointer",
-                }}
-            >
-                {copied ? "Copied!" : "Copy to Clipboard"}
-            </button>
+            <div className="chipher-container">
+                <div className="chiphered-text">{plainText.split("").map((c) => shiftLetter(c, mapToIndex(angle))).join("")}</div>
+            </div> 
+            </div>
+            <div className="button-container">
+                <motion.button
+                    onClick={handleCopy}
+                    style={{
+                        height: "2rem",
+                        width: "6rem",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        backgroundColor: copied ? "#28a745" : "#007bff",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        position: "absolute",
+                    }}
+                >
+                    {copied ? "Copied!" : "Copy"}
+                </motion.button> 
+            </div>                                              
             <div
                 className="disk-container" 
                 style={{ width: `${radius}px`, height: `${radius}px` }}    

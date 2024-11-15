@@ -2,7 +2,7 @@
     width: 500px;               /* Width of the circle */
     height: 500px;              /* Height of the circle */
     border-radius: 50%;         /* Makes it circular */
-    background: conic-gradient(blue 0deg 180deg, red 180deg 360deg);    /* Circle color */
+    background: rgb(181, 148, 92);    /* Circle color */
     animation: spin 2s linear infinite; /* Spin animation */
   }
 
@@ -35,12 +35,53 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: rgb(2, 141, 9);
+    background-color: rgb(54, 54, 54);
 
+}
+
+.text-container {  
+  display: flex;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+/*   margin-right: 1rem;*/
+}
+
+textarea {
+  width: 45%;
+  height: 30vh;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: transparent;
+  font-family: inherit;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.chipher-container {
+  position: relative;
+  margin-right: 1rem;
+  /* border: solid 2px; */
+  width: 50%;  
+  border: 2px solid;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
 .no-select {
   user-select: none; /* Prevent text selection */
   -webkit-user-select: none; /* For Safari */
   -ms-user-select: none; /* For Internet Explorer and Edge */
+}
+
+.shift-header {
+  margin-left: 1rem;
 }
