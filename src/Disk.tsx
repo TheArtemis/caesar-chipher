@@ -118,8 +118,7 @@ const Disk: React.FC<DiskProps> = ({radius = 500}) => {
                 <motion.button
                     onClick={handleCopy}
                     style={{
-                        height: "2rem",
-                        width: "6rem",
+                        padding: "1rem 2rem",
                         fontSize: "16px",
                         fontWeight: "bold",
                         backgroundColor: copied ? "#28a745" : "#007bff",
