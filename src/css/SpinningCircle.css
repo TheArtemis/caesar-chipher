@@ -1,0 +1,46 @@
+.circle {
+    width: 500px;               /* Width of the circle */
+    height: 500px;              /* Height of the circle */
+    border-radius: 50%;         /* Makes it circular */
+    background: conic-gradient(blue 0deg 180deg, red 180deg 360deg);    /* Circle color */
+    animation: spin 2s linear infinite; /* Spin animation */
+  }
+
+.circle-container {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  transform-origin: center;
+  cursor: grab;
+}
+
+.disk-container {
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+}
+
+.inner-circle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgb(2, 141, 9);
+
+}
+
+.no-select {
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none; /* For Safari */
+  -ms-user-select: none; /* For Internet Explorer and Edge */
+}
