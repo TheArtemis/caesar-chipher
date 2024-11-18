@@ -103,35 +103,34 @@ const Disk: React.FC<DiskProps> = ({radius = 500}) => {
 
     return (
         <div>
-            <div className="shift-header"><h3>Current shift: {mapToIndex(angle)}</h3></div>
-            <div className="text-container">
-                <textarea
-                value={plainText}
-                onChange={handleChange}
-                placeholder="Type here..."
-            />
-            <div className="chipher-container">
-                <div className="chiphered-text">{plainText.split("").map((c) => shiftLetter(c, mapToIndex(angle))).join("")}</div>
-            </div> 
-            </div>
-            <div className="button-container">
-                <motion.button
-                    onClick={handleCopy}
-                    style={{
-                        padding: "1rem 2rem",
-                        fontSize: "16px",
-                        fontWeight: "bold",
-                        backgroundColor: copied ? "#28a745" : "#007bff",
-                        color: "white",
-                        border: "none",
-                        borderRadius: "5px",
-                        cursor: "pointer",
-                        position: "absolute",
-                    }}
-                >
-                    {copied ? "Copied!" : "Copy"}
-                </motion.button> 
-            </div>                                              
+            <div className="text">                
+                <div className="head">
+                    <div className="title">
+                        <div>Caesar</div>
+                        <div>Cipher.</div>
+                    </div>
+                    <div className="button-container">
+                        <motion.button
+                            className="button-copy"
+                            onClick={handleCopy}                            
+                        >
+                            {copied ? "Copied!" : "Copy"}
+                        </motion.button> 
+                    </div> 
+                </div>           
+
+{/*             <div className="shift-header"><h3>Current shift: {mapToIndex(angle)}</h3></div>
+ */}            
+                <div className="text-container">
+                    <textarea className="plain-text"
+                    value={plainText}
+                    onChange={handleChange}
+                    placeholder="Type here..."
+                    />
+                    
+                    <div className="cipher-text">{plainText.split("").map((c) => shiftLetter(c, mapToIndex(angle))).join("")}</div>
+                </div>
+            </div>                                                         
             <div
                 className="disk-container" 
                 style={{ width: `${radius}px`, height: `${radius}px` }}    

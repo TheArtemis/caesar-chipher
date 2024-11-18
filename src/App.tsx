@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-	<div style={{marginTop: 0}}>
+	<div style={{marginTop: 0}}>    
 		<Disk radius={screenWidth} />
 	</div>
   );

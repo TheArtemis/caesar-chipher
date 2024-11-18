@@ -1,9 +1,58 @@
+.text {
+	margin-top: 2em;
+	margin-left: 2.5em;
+	margin-right: 2.5em;
+}
+
+.title {
+    font-weight: 800;
+	font-size: 36px;
+	color: var(--title-color);
+	
+}
+
+.head {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.button-container {
+	margin-left: auto;
+}
+
+.button-copy {
+	background-color: var(--main-color); /* Reddish-pink color */
+	border: none; /* Remove the button's border */
+	height: 5rem;
+	width: 5rem;
+	
+	text-align: center; /* Center the text */
+	text-decoration: none; /* Remove the default underline */
+	display: inline-block; /* Make the button inline */
+
+	color: white; 
+	font-weight: bold;
+	font-size: 14px;
+	font-family: inherit;
+
+	/* Slightly shifts the text from the center */
+	padding-top: 3px;
+	padding-right: 7px;
+
+	border-radius: 55% 51% 55% 52%;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow */
+	cursor: pointer;
+}
+
+
 .circle {
     width: 500px;               /* Width of the circle */
     height: 500px;              /* Height of the circle */
     border-radius: 50%;         /* Makes it circular */
-    background: rgb(181, 148, 92);    /* Circle color */
+    background: var(--text-color);
     animation: spin 2s linear infinite; /* Spin animation */
+	
   }
 
 .circle-container {
@@ -20,6 +69,8 @@
 
 .disk-container {
     position: relative;
+	margin-top: 300px;
+
 }
 
 .circle {
@@ -39,25 +90,58 @@
 
 }
 
-.text-container {  
-  display: flex;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-/*   margin-right: 1rem;*/
+.text-container { 
+	position: relative;
+	margin-top: 1em;	
 }
 
-textarea {
-  width: 45%;
-  height: 30vh;
-  border: none;
-  outline: none;
-  resize: none;
-  background-color: transparent;
-  font-family: inherit;
-  border: 2px solid;
-  border-radius: 5px;
-  padding: 0.5rem;
+.plain-text {	
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	height: 30vh;
+
+	line-height: 2.3rem;
+
+	font-size: 14px;
+	font-weight: bolder;
+	color: var(--text-color);
+	
+	padding: 0px;
+	padding-left: 1px;
+
+	border: none;
+	outline: none;
+	resize: none;
+	background-color: transparent;
+	font-family: inherit;
+	/* border: 2px solid;
+	border-radius: 5px; */
+}
+
+.cipher-text-container {
+	/* Deprecated */
+}
+
+.cipher-text {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 30vh;
+
+	margin-top: 1.2rem;
+	line-height: 2.3rem;
+
+	font-size: 14px;
+	font-weight: 300;
+	color: var(--text-color);
+	
+	padding: 0px;
+	padding-left: 1px;
+	letter-spacing: 0.2px;
+
+	/* border: 2px solid;
+  	border-radius: 5px; */
 }
 
 .chipher-container {
@@ -70,11 +154,7 @@ textarea {
   margin-left: 1rem;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 4rem;
-}
+
 
 .no-select {
   user-select: none; /* Prevent text selection */
